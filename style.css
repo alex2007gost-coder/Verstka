@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 12px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  }
+  
+  .icon-btn {
+    background: #FF2D55; 
+    border: none;
+    border-radius: 50%;
+    width: 40px;   
+    height: 40px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .icon-btn img {
+    width: 40px;   
+    height: 40px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo img {
+    height: 55px;    
+  }
+  
+  .right-btns {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .divider img {
+    height: 32px;
+    width: auto;
+  }
