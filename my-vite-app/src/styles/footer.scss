@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+
+  font-family: var(--font-primary);
+  width: 100%;
+
+  border-top: 1px solid rgba(217, 255, 245, 1);
+  background-color: #f8f8f8;
+
+  padding-top: 16px;
+  padding: 16px;
+
+  @media (min-width: 768px) {
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    font-size: 12px;
+  }
+
+  p {
+    text-align: center;
+    color: rgba(126, 126, 130, 1);
+    font-weight: 500;
+
+    @media (min-width: 768px) {
+      text-align: left; /* Для мобильных выравнивание текста слева */
+    }
+  }
+}

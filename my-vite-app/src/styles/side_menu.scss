@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'TTLakes';
+  src: url('/TTLakesCondensed-Regular.ttf');
+}
+
+.active {
+  color: gray;
+}
+.active::before {
+  position: absolute;
+  left: -20px;
+  top: -6px;
+  width: 4px;
+  height: 40px;
+  border-radius: 2px;
+  content: '';
+  background-color: rgba(65, 246, 215, 1);
+}
+
+.side_menu {
+  font-family: 'TTLakes';
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 300px;
+  display: block;
+
+  @media (max-width: 1369px) {
+    display: none;
+  }
+
+  &__navigation {
+    position: fixed;
+    /* Rectangle */
+
+    &-logo {
+      padding: 30px 20px;
+
+      @media (min-width: 320px) and (max-width: 1369px) {
+        padding: 24px 90px;
+      }
+    }
+
+    &--icon {
+      background-color: #ff3e79;
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ff3e79;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 1);
+        border: 1px solid #ff3e79;
+
+        img {
+          filter: brightness(0) saturate(100%) invert(26%) sepia(89%)
+            saturate(2084%) hue-rotate(325deg) brightness(98%) contrast(101%);
+        }
+      }
+
+      img {
+        width: 17px;
+        height: 17px;
+      }
+
+      &-search {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background-color: #ff3e79;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 1);
+          border: 1px solid #ff3e79;
+
+          img {
+            filter: brightness(0) saturate(100%) invert(26%) sepia(89%)
+              saturate(2084%) hue-rotate(325deg) brightness(98%) contrast(101%);
+          }
+        }
+      }
+
+      &-close {
+        position: absolute;
+        top: 30px;
+        left: 24px;
+        background-color: #ff3e79;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        @media (min-width: 320px) and (max-width: 1369px) {
+          display: flex;
+        }
+      }
+    }
+
+    &-list {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      &--li {
+        font-weight: 500;
+        font-size: 16px;
+        position: relative;
+      }
+    }
+
+    &-group_icon {
+      display: flex;
+      gap: 16px;
+      padding-left: 20px;
+      padding-top: 30px;
+    }
+
+    &-contacts {
+      padding-left: 20px;
+      padding-top: 10px;
+
+      font-size: 12px;
+    }
+
+    &-languages {
+      display: flex;
+      gap: 7px;
+
+      &-active {
+        color: rgba(126, 126, 130, 1);
+      }
+    }
+  }
+}
